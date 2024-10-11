@@ -1,0 +1,673 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "SamsungOne-700";
+}
+
+:root {
+  --purple-color: #5d37ac;
+  --blue-color: #eef7fd;
+  --green-color: #f1fefb;
+  --pink-color: #efedfd;
+  --yellow-color: #fef6df;
+  --light-blue-color: #e1ecfd;
+}
+
+@font-face {
+  font-family: "SamsungOne-700";
+  font-weight: 700;
+  src: url("./assets/fonts/SamsungOne-700.ttf") format("woff2");
+
+  font-family: "SamsungSharpSans-Bold";
+  font-weight: bold;
+  src: url("./assets/fonts/SamsungSharpSans-Bold.ttf") format("woff2");
+}
+
+.header {
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  margin-top: 13px;
+  width: 175px;
+  height: 45px;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.menu li {
+  display: inline-block;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 27px 12px 18px 12px;
+}
+
+@media (max-width: 1200px) {
+  .menu .link {
+    display: none;
+  }
+}
+
+nav img {
+  width: 20px;
+  height: 20px;
+}
+
+.icons {
+  margin-top: 0;
+  margin-left: auto;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.introduction {
+  display: flex;
+  position: sticky;
+  justify-content: space-evenly;
+  height: 8vh;
+  background-color: var(--purple-color);
+  margin-top: -5px;
+  padding: 0px 230px 0px 230px;
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: bold;
+  font-size: 1em;
+  top: 0;
+  z-index: 999;
+}
+
+.introduction span {
+  margin: auto;
+  cursor: pointer;
+}
+
+.contants {
+  margin-top: 120px;
+  text-align: center;
+}
+
+.contants h1 {
+  margin-bottom: 20px;
+}
+
+.contants .item {
+  width: 35vw;
+  height: 25vw;
+  border-radius: 55px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 80px;
+  gap: 20px;
+}
+
+#item1 {
+  position: relative;
+  background-color: var(--blue-color);
+  background-size: cover;
+}
+
+#item2 {
+  position: relative;
+  background-color: var(--green-color);
+  background-size: cover;
+}
+
+#item3 {
+  position: relative;
+  background-color: var(--pink-color);
+  background-size: cover;
+}
+
+#item4 {
+  position: relative;
+  background-color: var(--yellow-color);
+  background-size: cover;
+}
+
+section img {
+  width: 38%;
+  height: 56%;
+  position: absolute;
+  margin-top: 20px;
+  right: 20px;
+  top: 20px;
+}
+
+.number {
+  position: absolute;
+  width: 8%;
+  height: 7%;
+  border-radius: 50px;
+  color: white;
+  padding: 2px;
+  position: absolute;
+  top: 43%;
+  left: 10%;
+  font-size: 1em;
+}
+
+#num1 {
+  background-color: rgb(81, 146, 223);
+}
+
+#num2 {
+  background-color: rgb(63, 140, 132);
+}
+
+#num3 {
+  background-color: rgb(75, 62, 153);
+}
+
+#num4 {
+  background-color: rgb(183, 138, 82);
+}
+
+.note {
+  position: absolute;
+  top: 53%;
+  left: 10%;
+  font-size: 0.8em;
+}
+
+section span {
+  position: absolute;
+  margin-top: 1.2rem;
+  top: 55%;
+  left: 10%;
+  font-size: 1.4em;
+  text-align: left;
+  font-weight: bold;
+}
+
+.item button {
+  /* width: 20%; */
+  min-width: 6.25rem;
+  height: 2.8rem;
+  border: none;
+  border-radius: 50px;
+  color: black;
+  margin: 1%;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@media (max-width: 1200px) {
+  .item button {
+    display: none;
+  }
+  section span {
+    position: absolute;
+    margin-top: 1.2rem;
+    top: 55%;
+    left: 10%;
+    font-size: 1.2em;
+    text-align: left;
+    font-weight: bold;
+  }
+}
+
+#item1 button {
+  background-color: rgb(188, 223, 252);
+  margin-top: 58%;
+}
+
+#item2 button {
+  background-color: rgb(184, 238, 224);
+  margin-top: 58%;
+}
+
+#item3 button {
+  background-color: rgb(198, 198, 251);
+  margin-top: 58%;
+}
+
+#item4 button {
+  width: 30%;
+  background-color: rgb(250, 226, 142);
+  margin-top: 58%;
+  margin-left: 60%;
+}
+
+.signup {
+  background-color: var(--light-blue-color);
+  height: 90rem;
+  position: relative;
+}
+
+.signup::before {
+  content: "";
+  background-image: url("https://images.samsung.com/kdp/event/galaxycampus/2024/0101_about/abt_join_deco01_pc_v1.png");
+  position: absolute;
+  width: 50%;
+  height: 76%;
+  top: -3%;
+  left: -26%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.signup::after {
+  content: "";
+  background-image: url("https://images.samsung.com/kdp/event/galaxycampus/2024/0101_about/abt_join_deco02_pc_v1.png");
+  position: absolute;
+  width: 20%;
+  height: 65%;
+  top: 30%;
+  right: -0%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.signup-container {
+  position: absolute;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 100px;
+  height: 100%;
+
+  h3 {
+    text-align: left;
+  }
+}
+
+.signup h1 {
+  font-size: 2.3em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.signup p {
+  font-size: 1.2em;
+}
+
+.signup button {
+  width: 150px;
+  height: 45px;
+  border: none;
+  border-radius: 50px;
+  background-color: white;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  color: rgb(183, 183, 183);
+  margin: 5px;
+  margin-top: 50px;
+  cursor: pointer;
+}
+
+.signup .selected {
+  background-color: rgb(80, 155, 248);
+  color: white;
+  box-shadow: rgba(255, 255, 255, 0.5) 0px 2.02917px 4.05833px 0px inset;
+}
+
+.aa {
+  color: #fff !important;
+  background-color: #181818 !important;
+
+  &:hover {
+    background-color: transparent !important;
+    color: #181818 !important;
+    border: solid 1px #181818 !important;
+    transition: 0.2s;
+  }
+}
+
+#years {
+  font-size: 0.7em;
+  font-weight: lighter;
+}
+
+h2 {
+  font-size: 1.7em;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+.contants2 {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-inline: 1%;
+  width: 60vw;
+  height: 550px;
+  background-color: rgb(238, 245, 254);
+  margin: auto;
+  margin-top: 70px;
+  border-radius: 10px;
+}
+
+.contants2__item3 {
+  height: 500px;
+}
+
+.contants3 {
+  width: 60vw;
+  background-color: rgb(238, 245, 254);
+  margin: auto;
+  display: flex;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: left;
+  border-radius: 10px;
+}
+
+.dif {
+  font-weight: bold;
+  display: inline-block;
+}
+
+b {
+  color: rgb(1, 112, 242);
+  margin-left: 15px;
+}
+
+.icon {
+  background-image: url("	https://images.samsung.com/kdp/event/galaxycampus/2024/0101_about/abt_join_alert_pc_v1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+}
+
+.contants2__item1,
+.contants2__item2 {
+  height: 20px;
+}
+
+.speech-bubble {
+  padding: 10px;
+  text-align: center;
+  line-height: 20px;
+  width: 230px;
+  margin: auto;
+
+  margin-top: 40px;
+  font-weight: bold;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("https://images.samsung.com/kdp/event/galaxycampus/2024/0101_about/abt_join_step_titlebg_pc.png");
+}
+
+.vertical {
+  margin-top: 15px;
+}
+
+.bubble-item1 {
+  width: 100px;
+  height: 100px;
+  float: left;
+  margin-top: -20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("https://images.samsung.com/kdp/event/galaxycampus/2024/0101_about/abt_join_step_email_pc_v1.png");
+}
+
+.bubble-item2 {
+  width: 100px;
+  height: 100px;
+  margin-top: -20px;
+  float: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("	https://images.samsung.com/kdp/event/galaxycampus/2024/0101_about/abt_join_step_paper_pc_v1.png");
+}
+
+.vertical h3 {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.kakao {
+  width: 100%;
+  height: 100px;
+  font-size: 0.6875rem;
+  /* display: flex; */
+  margin: auto;
+  /* flex-wrap: nowrap; */
+
+  p {
+    margin-top: 100px;
+    font-size: 0.875rem;
+  }
+}
+
+.kakao--item1 {
+  display: inline-block;
+  width: 6.25rem;
+  height: 6.25rem;
+  background-image: url("	https://images.samsung.com/kdp/event/galaxycampus/2024/0101_about/abt_join_step03_icon01_pc_v1.png");
+  background-size: contain;
+}
+
+.next {
+  width: 2.5rem;
+  display: inline-block;
+  height: 2.5rem;
+  background-size: contain;
+  margin-bottom: 3.8rem;
+  margin-block-end: 3.8rem;
+  background-image: url("https://images.samsung.com/kdp/event/galaxycampus/2024/0101_about/abt_join_step03_arrow_pc_v1.png");
+}
+
+.kakao--item2 {
+  width: 6.25rem;
+  display: inline-block;
+
+  height: 6.25rem;
+  background-image: url("	https://images.samsung.com/kdp/event/galaxycampus/2024/0101_about/abt_join_step03_icon02_pc_v1.png");
+  background-size: contain;
+}
+
+.kakao--item3 {
+  width: 6.25rem;
+  height: 6.25rem;
+  display: inline-block;
+
+  background-image: url("	https://images.samsung.com/kdp/event/galaxycampus/2024/0101_about/abt_join_step03_icon03_pc_v1.png");
+  background-size: contain;
+}
+
+.kakao--item4 {
+  width: 6.25rem;
+  display: inline-block;
+
+  height: 6.25rem;
+  background-image: url("	https://images.samsung.com/kdp/event/galaxycampus/2024/0101_about/abt_join_step03_icon04_pc_v1.png");
+  background-size: contain;
+}
+
+.notice {
+  margin-top: 58px;
+  margin-bottom: -80px;
+  margin-block-start: 80px;
+  font-size: 0.675rem !important;
+  color: #4f4f4f;
+  text-align: left;
+}
+
+.gray-section {
+  background-color: rgb(247, 247, 252);
+  height: 55rem;
+  padding: 100px;
+  padding-top: 80px;
+
+  .card-view {
+    display: flex;
+    gap: 20px;
+    height: 35rem;
+    justify-content: center;
+    margin-top: 3.125rem;
+    margin-block-start: 3.125rem;
+  }
+
+  .card {
+    width: 25%;
+    inline-size: 25%;
+    height: 450px !important;
+    block-size: 40%;
+    border-radius: 10px;
+    background-color: #fff;
+  }
+
+  h1 {
+    font-size: 2.3em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-block-start: 20px;
+  }
+
+  p {
+    font-size: 1.2em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  img {
+    width: 5rem;
+    height: 5rem;
+    margin-top: 30px;
+    margin-block-start: 30px;
+  }
+
+  hr {
+    border: 1px solid #ddd;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-block-end: 50px;
+  }
+
+  strong {
+    color: #818181;
+  }
+
+  .notice {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-block: 5px;
+  }
+
+  .help__me {
+    margin-left: 30px;
+    margin-inline-start: 30px;
+    font-size: 0.8rem;
+    text-align: center;
+    color: #818181;
+    font-weight: 400;
+    text-align: left;
+  }
+}
+
+.text-block {
+  margin: auto;
+  p {
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+
+.qna {
+  .font-samsung {
+    font-family: "SamsungSharpSans-Bold";
+    font-size: 1.2rem;
+  }
+
+  h1 {
+    font-size: 2.3em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-block-start: 20px;
+  }
+
+  p {
+    font-size: 1.2em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .qna__btn {
+    inline-size: 11.375rem;
+    background-color: #fff;
+    color: #818181;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-block: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 30px;
+    font-size: 1rem;
+    border: 1px #ccc solid;
+  }
+
+  #qna__btn__active {
+    background-color: #181818;
+    color: #fff;
+  }
+
+  ul {
+    margin-top: 30px;
+    margin-block-start: 30px;
+    margin-bottom: 100px;
+    margin-block-end: 100px;
+  }
+
+  li {
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-block: 20px;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    margin-inline: 20vw;
+    font-weight: bold;
+    list-style: none;
+    font-size: 1.125rem;
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+footer {
+  display: flex;
+  background-color: #181818;
+  color: white;
+  padding: 80px;
+  padding-left: 120px;
+  padding-inline-start: 120px;
+
+  li {
+    color: #818181;
+    font-size: 0.8rem;
+    margin-left: 80px;
+    margin-inline-start: 80px;
+    margin-bottom: 10px;
+  }
+}
